@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 03: Номын сангийн бүртгэл (CSS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Номын Сангийн Бүртгэлийн Систем</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Нүүр</a></li>
+                <li><a href="#">Ном хайх</a></li>
+                <li><a href="#">Тусламж</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section class="badge-container">
+                <span class="badge">Шинэ</span>
+                <h2 class="section-title">Номын Сангийн Уншигчийн Бүртгэл</h2>
+                <p style="margin-bottom: 15px; color: #718096;">Та номын сангийн карт нээлгэхийн тулд доорх формыг бүрэн, үнэн зөв бөглөнө үү.</p>
+
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Уншигчийн Хувийн Мэдээлэл</legend>
+                        
+                        <div class="form-group">
+                            <label for="fullname">Овог нэр:</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Н. Болд" required minlength="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Цахим хаяг (Email):</label>
+                            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Нууц үг:</label>
+                            <input type="password" id="password" name="password" required minlength="6">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Утасны дугаар:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="88111223" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob">Төрсөн огноо:</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Хүйс:</label>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male" class="inline-label">Эрэгтэй</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female" class="inline-label">Эмэгтэй</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Гишүүнчлэл ба Номын Сонирхол</legend>
+
+                        <div class="form-group">
+                            <label for="member_type">Гишүүнчлэлийн ангилал:</label>
+                            <select id="member_type" name="member_type" required>
+                                <option value="">-- Сонгоно уу --</option>
+                                <option value="student">Оюутан</option>
+                                <option value="teacher">Багш / Судлаач</option>
+                                <option value="public">Иргэн</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Сонирхож буй номын жанрууд:</label>
+                            <input type="checkbox" id="tech" name="genres" value="tech">
+                            <label for="tech" class="inline-label">Техник / Компьютер</label><br>
+                            <input type="checkbox" id="science" name="genres" value="science">
+                            <label for="science" class="inline-label">Шинжлэх ухаан</label><br>
+                            <input type="checkbox" id="fiction" name="genres" value="fiction">
+                            <label for="fiction" class="inline-label">Уран зохиол</label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_card">Иргэний үнэмлэхийн хуулбар / Зураг оруулах:</label>
+                            <input type="file" id="id_card" name="id_card" accept="image/*">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="note">Нэмэлт хүсэлт / Тэмдэглэл:</label>
+                            <textarea id="note" name="note" rows="4" placeholder="Тэмдэглэлээ бичнэ үү..."></textarea>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn-submit">Бүртгүүлэх</button>
+                    <button type="reset" class="btn-reset">Дахин эхлүүлэх</button>
+                </form>
+            </section>
+        </article>
+    <footer>
+        <p>&copy; 2026 Номын Сангийн Систем. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+
+</body>
+</html>
